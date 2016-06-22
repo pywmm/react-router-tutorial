@@ -3,5 +3,10 @@
 <meta charset=utf-8/>
 <title>My First React Router App</title>
 <link rel=stylesheet href=index.css>
+
+<p>1. Now navigate around. Notice anything weird? The link to Home is always active! As we learned earlier, parent routes are active when child routes are active. Unfortunately, / is the parent of everything.</p>
+<p>2. For this link, we want it to only be active when the index route is active. There are two ways to let the router know you're linking to the "index route" so it only adds the active class (or styles) when the index route is rendered.</p>
+<p>3. 法1 First lets use the IndexLink</p>
+<p>4. 法2 We can use Link as well by passing it the onlyActiveOnIndex prop (IndexLink just wraps Link with this property for convenience).</p>
 <div id=app></div>
 <script src="bundle.js"></script>
