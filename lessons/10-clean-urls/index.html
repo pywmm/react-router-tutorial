@@ -2,6 +2,11 @@
 <html>
 <meta charset=utf-8/>
 <title>My First React Router App</title>
-<link rel=stylesheet href=index.css>
+<link rel=stylesheet href=/index.css>
+<p>1. The URLs in our app right now are built on a hack: the hash. Its the default because it will always work, but there's a better way.
+	  Open up index.js and import browserHistory instead of hashHistory. </p>
+<p>2. 第一步完成后，瀏覽器無法識別改變后的url，及也無法後退啥的。
+	所以添加"start": "webpack-dev-server --inline --content-base . --history-api-fallback"</p>
+<p>3. We also need to change our relative paths to absolute paths in index.html since the urls will be at deep paths and the app, if it starts at a deep path, won't be able to find the files.</p>
 <div id=app></div>
-<script src="bundle.js"></script>
+<script src="/bundle.js"></script>
